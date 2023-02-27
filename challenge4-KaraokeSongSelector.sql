@@ -1,8 +1,8 @@
---Challenge: Karaoke song selector
+/*Challenge: Karaoke song selector
 
 -- Step 1
---We've created a table with songs, and in this challenge, you'll use queries to decide what songs to sing. 
---For the first step, select all the song titles.
+- We've created a table with songs, and in this challenge, you'll use queries to decide what songs to sing. 
+- For the first step, select all the song titles.*/
 
 CREATE TABLE songs (
     id INTEGER PRIMARY KEY,
@@ -29,14 +29,14 @@ INSERT INTO songs (title, artist, mood, duration, released)
 INSERT INTO songs (title, artist, mood, duration, released)
     VALUES ("Call me maybe", "Carly Rae Jepsen", "happy", 193, 2011);
 
--- Select all the song titles  
+/* Select all the song titles  */
 SELECT title FROM songs;
 
--- Step 2
---  Add another SELECT that uses OR to show the titles of the songs that have an 'epic' mood or a release date after 1990.
+/* Step 2
+-  Add another SELECT that uses OR to show the titles of the songs that have an 'epic' mood or a release date after 1990.*/
 SELECT title FROM songs WHERE mood = 'epic' OR released > 1990;  
 
--- Step 3
-/*Add another SELECT that uses AND to show the titles of songs that are 'epic', and released after 1990, and less than 4 minutes long.
+/*  Step 3
+- Add another SELECT that uses AND to show the titles of songs that are 'epic', and released after 1990, and less than 4 minutes long.
 Note that the duration column is measured in seconds.*/
 SELECT title FROM songs WHERE mood = 'epic' AND released > 1990 AND duration < 240; 

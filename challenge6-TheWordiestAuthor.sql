@@ -1,5 +1,5 @@
 
---Challenge: The wordiest author
+/* Challenge: The wordiest author*/
 
 CREATE TABLE books (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -41,13 +41,13 @@ INSERT INTO books (author, title, words)
     VALUES ("J.R.R. Tolkien", "Return of the King", 134462);
 
 
--- Step 1
--- In this first step, select all the authors who have written more than 1 million words, using GROUP BY and HAVING. Your results table should include the 'author' 
---and their total word count as a 'total_words' column.
+/* Step 1
+- In this first step, select all the authors who have written more than 1 million words, using GROUP BY and HAVING. Your results table should include the 'author' 
+and their total word count as a 'total_words' column. */
 SELECT author, SUM(words) AS total_words FROM books GROUP BY author HAVING total_words > 1000000;
 
--- Step 2
---Now select all the authors that write more than an average of 150,000 words per book. 
---Your results table should include the 'author' and average words as an 'avg_words' column.
+/* Step 2
+- Now select all the authors that write more than an average of 150,000 words per book. 
+- Your results table should include the 'author' and average words as an 'avg_words' column. */
 SELECT author, AVG(words) AS avg_words FROM books GROUP BY author HAVING avg_words > 150000;
  
