@@ -44,10 +44,12 @@ INSERT INTO books (author, title, words)
 /* Step 1
 - In this first step, select all the authors who have written more than 1 million words, using GROUP BY and HAVING. Your results table should include the 'author' 
 and their total word count as a 'total_words' column. */
-SELECT author, SUM(words) AS total_words FROM books GROUP BY author HAVING total_words > 1000000;
+SELECT author, SUM(words) AS total_words FROM books 
+GROUP BY author HAVING total_words > 1000000;
 
 /* Step 2
 - Now select all the authors that write more than an average of 150,000 words per book. 
 - Your results table should include the 'author' and average words as an 'avg_words' column. */
-SELECT author, AVG(words) AS avg_words FROM books GROUP BY author HAVING avg_words > 150000;
+SELECT author, AVG(words) AS avg_words FROM books
+ GROUP BY author HAVING avg_words > 150000;
  
